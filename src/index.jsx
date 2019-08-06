@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/app';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
+const Hello = (props) => {
   return (
     <div>
-      Hello,
-      {name}
+      Hello, {props.name}
     </div>
   );
 };
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(<App />, root);
 }
